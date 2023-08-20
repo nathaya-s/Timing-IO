@@ -32,7 +32,6 @@ def cal_defect_box_ratio(x):
     print("defect ratio average : ", sum_defect_box_ratio / len(x))
 
 
-start = time.time()
 save_path = './Timing-IO'
 completeName = os.path.join(save_path, "Write_file"+".csv")
 
@@ -42,6 +41,7 @@ for i in range(0, 50000):
     rand_2 = random.randint(0, 1)
     data.append([i, "08/11/2563", "CBR1", rand_1, rand_2])
 
+start = time.time()
 writefile(data)
 openfile()
 
